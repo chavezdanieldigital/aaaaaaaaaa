@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor {
+        display: grid; /*Se comporta como bloque*/
+        grid-template-columns: 50vw 50vw ;
+        gap: 10px;
+}
+
+    .table{
+        background: lightblue;
+        padding: 20px;
+}
+.grid1,
+.grid2 {
+    display: inline-grid; /*Se comporta como un elemento inline*/
+    grid-template-columns: 50px 50px;
+    gap: 15px;
+}
+
+.contenedordos {
+    display: grid;
+    grid-template-rows: 100px 150px 200px;
+}
+
+.tab {
+    background: lightyellow;
+    border: 1px solid black;
+}
+
+.pagina {
+    display: grid;
+
+    grid-template-columns: 200px 1fr 200px;
+
+    grid-template-rows: 80px 300px 60px;
+
+    grid-template-areas:
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+}
+
+header {
+    grid-area: header;
+    background: lightblue;
+}
+
+nav {
+    grid-area: nav;
+    background: lightgreen;
+}
+
+main {
+    grid-area: main;
+    background: lightyellow;
+}
+
+aside {
+    grid-area: aside;
+    background: lightcoral;
+}
+
+footer {
+    grid-area: footer;
+    background: lightgray;
+}
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="table">1</div>
+        <div class="table">2</div>
+        <div class="table">3</div>
+        <div class="table">4</div>
+    </div>
+
+    <div class="grid1">
+    <h1>A</h1>
+    <h1>B</h1>
+    </div>
+
+<div class="grid2">
+    <h1>C</h1>
+    <h1>D</h1>
+</div>
+
+<div class="contenedordos">
+    <div class="tab">Fila 1</div>
+    <div class="tab">Fila 2</div>
+    <div class="tab">Fila 3</div>
+</div>
+
+<div class="pagina">
+
+    <header>Encabezado</header>
+
+    <nav>Menú</nav>
+
+    <main>Contenido</main>
+
+    <aside>Barra lateral</aside>
+
+    <footer>Pie de página</footer>
+
+</div>
+</body>
+</html>
